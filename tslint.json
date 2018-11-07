@@ -12,7 +12,9 @@
         "member-ordering": false,
         "jsx-no-lambda": false,
         "interface-name": false,
-        "no-any": true
+        "no-any": true,
+        "member-access": [true, "no-public"],
+        "jsx-boolean-value": false
     },
     "defaultSeverity": "warning"
 }

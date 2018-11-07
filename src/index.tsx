@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
 
-import App from './App';
+import Routers from './routers';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Routers />, document.getElementById('root'));
 
 registerServiceWorker();
