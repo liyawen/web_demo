@@ -6,6 +6,7 @@ import history from './history';
 import Navigationbar from './Navigationbar';
 import FooterBar from './FooterBar';
 import { Path } from './path';
+import './css/Routers.css';
 
 import Home from '../components/home';
 import HomeDemo from '../components/homeDemo';
@@ -16,7 +17,7 @@ const { Content } = Layout;
 export default class Routers extends Component {
   render() {
     return (
-      <Layout className="layout">
+      <Layout className="layout layout-wrapper">
         <Router history={history}>
           <div>
             <Navigationbar />
@@ -34,7 +35,6 @@ export default class Routers extends Component {
           </div>
         </Router>
       </Layout>
-      
     );
   }
 }

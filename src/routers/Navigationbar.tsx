@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 import { Layout } from 'antd';
+import { ClickParam } from 'antd/lib/menu';
 
 import { Path } from './path';
 import LogoImg from './img/avatar.jpeg';
@@ -28,6 +29,11 @@ const NavName = {
 }
 
 export default class Navigationbar extends PureComponent {
+  constructor(props: {}) {
+    super(props);
+    this.handleActiveMenu = this.handleActiveMenu.bind(this);
+  }
+
   navList: NavItemOpts[] = [{
     key: NavName.main,
     route: Path.ROOT,
@@ -40,28 +46,46 @@ export default class Navigationbar extends PureComponent {
     iconKey: 'meh'
   }];
 
-  getActiveNav(): NavItemOpts | null {
+  state = {
+    activeKey: this.navList[0].key,
+  };
+
+  componentDidMount() {
+    this.getActiveKey();
+  }
+
+  handleActiveMenu({key}: ClickParam) {
+    this.setState({
+      activeKey: key,
+    });
+  }
+
+  getActiveKey() {
+    let activeNav: NavItemOpts | null = null;
     for (const navItem of this.navList) {
       if (location.pathname.indexOf(navItem.route) === 0) {
-        return navItem;
+        activeNav = navItem;
       }
     }
-    return null;
+    if (activeNav) {
+      this.setState({
+        activeKey: activeNav.key
+      });
+    }
   }
 
   render() {
-    const activeNav = this.getActiveNav();
-    console.log('activeNav', activeNav)
     return (
       <Header>
         <img className="logo" src={LogoImg} alt="liyawen" />
         <Menu
           theme="dark"
           mode="horizontal"
-          selectedKeys={activeNav ? [activeNav.key] : []}
+          onClick={this.handleActiveMenu}
+          selectedKeys={[this.state.activeKey]}
         >
           {this.navList.map((nav: NavItemOpts) => (
-            <MenuItem key={nav.key}>
+            <MenuItem className="menu-item-wrapper" key={nav.key}>
               <Link to={nav.route}>
                 {nav.iconKey && <Icon type={nav.iconKey} theme="outlined" />}
                 {nav.text}
