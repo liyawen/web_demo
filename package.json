@@ -17,7 +17,12 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "lint": "eslint --ext=.js,.ts,.tsx bin config src",
+    "lint:fix": "yarn lint --fix"
+  },
+  "lint-staged": {
+    "{src,bin,config,test}/**/*.{js,jsx,ts,tsx}": "eslint"
   },
   "devDependencies": {
     "@types/jest": "^23.3.9",
@@ -25,7 +30,11 @@
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
     "@types/react-router": "^4.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
     "eslint-config-standard-ye": "^1.0.14",
+    "eslint-config-standard-ye-ts": "^1.0.3",
+    "eslint-loader": "^2.1.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-react": "^3.6.0",
