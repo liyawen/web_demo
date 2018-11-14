@@ -1,4 +1,4 @@
 export enum Path {
   ROOT = '/',
-  HOME_DEMO = '/homeDemo',
+  SKETCH_TO_WEB = '/sketchToWeb',
 }

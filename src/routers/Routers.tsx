@@ -9,7 +9,7 @@ import { Path } from './path';
 import './css/Routers.css';
 
 import Home from '../components/home';
-import HomeDemo from '../components/homeDemo';
+import SketchToWeb from '../components/sketchToWeb';
 
 const { Component } = React;
 const { Content } = Layout;
@@ -28,7 +28,7 @@ export default class Routers extends Component {
                 </Route> */}
                 {/* <Route exact path={Path.ROOT} render={() => <Redirect to={Path.TRAINING} />} /> */}
               <Route exact path={Path.ROOT} render={() => <Home />} />
-              <Route exact path={Path.HOME_DEMO} render={() => <HomeDemo />} />    
+              <Route exact path={Path.SKETCH_TO_WEB} render={() => <SketchToWeb />} />    
             </Content>
     
             <FooterBar />

@@ -25,7 +25,7 @@ type NavItemOpts = NavItemProps & {
 
 const NavName = {
   main: 'main',
-  mainDemo: 'mainDemo'
+  sketchToWeb: 'sketchToWeb'
 }
 
 export default class Navigationbar extends PureComponent {
@@ -40,10 +40,9 @@ export default class Navigationbar extends PureComponent {
     text: NavName.main,
     iconKey: 'smile'
   }, {
-    key: NavName.mainDemo,
-    route: Path.HOME_DEMO,
-    text: NavName.mainDemo,
-    iconKey: 'meh'
+    key: NavName.sketchToWeb,
+    route: Path.SKETCH_TO_WEB,
+    text: NavName.sketchToWeb,
   }];
 
   state = {
