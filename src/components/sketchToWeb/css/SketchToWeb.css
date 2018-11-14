@@ -9,3 +9,67 @@
   margin: 0 auto;
   background:rgba(255,255,255,1);
 }
+
+.banner-wrapper {
+  display: flex;
+  height: 576px;
+  width: 100%;
+  overflow: hidden;
+}
+.banner-wrapper>div {
+  flex: 1;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+
+.banner-img {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  overflow: hidden;
+}
+
+.banner-title {
+  margin-left: 77px;
+  margin-top: 77px;
+  margin-bottom: 92px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-title>p {
+  font-family: SFNSDisplay;
+  color:#272727;
+  font-size:40px;
+  line-height:47px;
+  margin: 0;
+}
+
+.banner-title>img {
+  margin-bottom: 26px;
+}
+
+.banner-title>p:nth-child(0n+2) {
+  font-size:65px;
+  line-height:76px;
+  letter-spacing:1px;
+}
+
+.banner-title>p:nth-child(0n+4) { 
+  color: #E7634F;
+  margin-bottom: 50px;
+}
+
+.banner-title>button {
+  background-color: #E7634F;
+  line-height: 46px;
+  color: #fff;
+  font-size:13px;
+  font-family:AppleSystemUIFont;
+  padding: 0 26px;
+  letter-spacing:1px;
+}
+
+.banner-title>button:hover {
+  background-color: #c5412d;
+}

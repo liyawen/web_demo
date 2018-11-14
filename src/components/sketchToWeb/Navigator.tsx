@@ -6,16 +6,13 @@ const { Component } = React;
 
 interface INavState {
   activeKey: string;
-  currentKey: string;
 }
 
 export default class Navigator extends Component<{}, INavState> {
   constructor(props: {}) {
     super(props);
-    // this.handleFocusNav = this.handleFocusNav.bind(this);
     this.state = {
-      activeKey: '',
-      currentKey: 'ASIA_FASHION',
+      activeKey: 'ASIA_FASHION',
     }
   }
 
@@ -36,26 +33,21 @@ export default class Navigator extends Component<{}, INavState> {
     title: 'CONTACT',
   }];
 
-  handleFocusNav(navKey: string) {
-    console.log(navKey)
-    this.setState({
-      activeKey: navKey
-    });
+  handleClickNav(navKey: string) {
+    console.log(navKey);
   }
 
   render() {
-    const { currentKey, activeKey } = this.state;
+    const { activeKey } = this.state;
     return (
       <header className="header-wrapper">
         <ul className="nav-wrapper">
           {this.navsArr.map(nav => {
             let className = ['nav-item'];
-            if (nav.key === currentKey) {
-              className = className.concat('nav-current');
-            // } else if (nav.key === activeKey) {
-            //   className = className.concat('nav-active');
+            if (nav.key === activeKey) {
+              className = className.concat('nav-active');
             }
-            return (<li className={className.join(' ')} onMouseOver={this.handleFocusNav.bind(this, nav.key)} key={nav.key}>{nav.title}</li>)
+            return (<li className={className.join(' ')} onClick={this.handleClickNav.bind(this, nav.key)} key={nav.key}>{nav.title}</li>)
           })}
         </ul>
       </header>

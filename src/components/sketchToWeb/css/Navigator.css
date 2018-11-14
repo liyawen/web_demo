@@ -16,35 +16,24 @@
 }
 
 .nav-item {
-  flex: auto;
   align-items: center;
   justify-content: space-between;
   font-family: AppleSystemUIFont;
   font-size: 11px;
   color: rgba(0,0,0,1);
   line-height: 13px;
+  cursor: pointer;
 }
 
 .nav-item:hover {
-  font-size: 14px;
-  color: #fff;
-  line-height: 24px;
-  letter-spacing: 4px;
-  background-color: #1890ff;
+  color: #1890ff;
 }
 
-.nav-current {
+.nav-active {
   font-size: 21px;
   font-family: SFNSDisplay;
   color: rgba(39,39,39,1);
   line-height: 24px;
   letter-spacing: 4px;
-}
-
-.nav-active {
-  font-size: 14px;
-  color: #fff;
-  line-height: 24px;
-  letter-spacing: 4px;
-  background-color: #1890ff;
+  text-decoration: underline;
 }

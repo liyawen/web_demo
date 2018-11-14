@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="footer-wrapper">
-        jsjhdhhfnnnnnnssss
+        footer
       </footer>
     )
   };
