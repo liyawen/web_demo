@@ -24,3 +24,90 @@
 .btn-orange:hover {
   background-color: #c5412d;
 }
+
+.type-wrapper {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  max-width: 740px;
+  margin: auto;
+}
+
+.type-wrapper>div {
+  margin: 0 40px;
+  width: 420px;
+}
+
+.type-wrapper>div>span:nth-child(0n+1) {
+  font-size:22px;
+  line-height:29px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.type-wrapper>div>span:nth-child(0n+2) {
+  display: block;
+  font-size:15px;
+  line-height:26px;
+  color: #757575;
+  margin-bottom: 37px;
+}
+
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #F5F5F5;
+}
+
+.gallery-wrapper>h5 {
+  font-size:22px;
+  line-height:29px;
+  letter-spacing:2px;
+}
+
+.gallery-wrapper>.gallery-pic {
+  display: flex;
+  width: 730px;
+  margin: 65px auto;
+}
+
+.gallery-pic img {
+  margin: 5px;
+}
+
+.msg-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  justify-content: center;
+}
+
+.msg-wrapper>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  margin: 0 13px;
+}
+
+.msg-wrapper>div>span:nth-child(0n+2) {
+  font-size:22px;
+  line-height:29px;
+  letter-spacing:2px;
+  margin: 26px auto;
+  display: block;
+}
+
+.msg-wrapper>div>span:nth-child(0n+3) {
+  font-size:15px;
+  line-height:26px;
+  color: #757575;
+  margin-bottom: 40px;
+}
