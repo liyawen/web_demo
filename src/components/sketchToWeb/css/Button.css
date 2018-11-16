@@ -1,0 +1,26 @@
+.btn-white {
+  background-color: #fff;
+  border:1px solid #E76450;
+  color: #E76450;
+  padding: 0 26px;
+  letter-spacing: 2px;
+  line-height: 46px;
+}
+
+.btn-white:hover {
+  background-color: #fa9598;
+  border:1px solid #c5412d;
+  color: #c5412d;
+}
+
+.btn-orange {
+  background-color: #E7634F;
+  line-height: 46px;
+  color: #fff;
+  padding: 0 26px;
+  letter-spacing: 2px;
+}
+
+.btn-orange:hover {
+  background-color: #c5412d;
+}
