@@ -1,3 +1,8 @@
 .layout-wrapper {
   background-color: #fff;
 }
+
+.routes-wrapper {
+  display: flex;
+  justify-content: center;
+}

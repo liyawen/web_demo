@@ -25,7 +25,8 @@ type NavItemOpts = NavItemProps & {
 
 const NavName = {
   main: 'main',
-  sketchToWeb: 'sketchToWeb'
+  sketchToWeb: 'sketchToWeb',
+  crossOrigin: 'crossOrigin'
 }
 
 export default class Navigationbar extends PureComponent {
@@ -43,6 +44,10 @@ export default class Navigationbar extends PureComponent {
     key: NavName.sketchToWeb,
     route: Path.SKETCH_TO_WEB,
     text: NavName.sketchToWeb,
+  }, {
+    key: NavName.crossOrigin,
+    route: Path.CROSS_ORIGIN,
+    text: NavName.crossOrigin,
   }];
 
   state = {
